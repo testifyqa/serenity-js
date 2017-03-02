@@ -9,9 +9,8 @@
     "declaration": true
   },
 
-  "include": [
-    "src/**/*.ts",
-    "spec/**/*.ts"
+  "files": [
+    "node_modules/chai-smoothie/lib/chai-smoothie.d.ts"
   ],
 
   "exclude": [
