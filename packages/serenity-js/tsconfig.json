@@ -2,26 +2,7 @@
   "extends": "../../tsconfig.json",
 
   "compilerOptions": {
-    "outDir": "./staging/transpiled",
-
-    "types": [
-      "graceful-fs",
-      "lodash",
-      "mkdirp",
-      "stack-trace",
-      "node",
-      "selenium-webdriver",
-
-      "chai",
-      "chai-as-promised",
-      "express",
-      "express-serve-static-core",
-      "mocha",
-      "mock-fs",
-      "nock",
-      "sinon",
-      "sinon-chai"
-    ]
+    "outDir": "./staging/transpiled"
   },
 
   "include": [
