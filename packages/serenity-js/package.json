@@ -39,7 +39,6 @@
     "coverage:report": "nyc report --reporter=html --reporter=lcov --temp-directory=./staging/reports/coverage --report-dir=./staging/reports/coverage",
     "report": "npm run coverage:merge && npm run coverage:report",
     "coverage:publish": "cat ./staging/reports/coverage/lcov.info | node ./node_modules/coveralls/bin/coveralls.js",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "failsafe": "failsafe"
   },
   "peerDependencies": {
@@ -93,7 +92,6 @@
     "phantomjs-prebuilt": "2.1.14",
     "protractor": "5.1.1",
     "rimraf": "2.5.4",
-    "semantic-release": "^6.3.5",
     "sinon": "1.17.7",
     "sinon-chai": "2.8.0",
     "ts-helper": "0.0.1",

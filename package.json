@@ -26,13 +26,16 @@
     "book:build": "gitbook build",
     "prebook:publish": "npm run book:clean && npm run book:build",
     "book:publish": "node ./gh-pages.js -d _book --dotfiles",
+    "semantic-release": "lerna-semantic-release pre && lerna-semantic-release perform && lerna-semantic-release post",
+    "semantic-release-dry-run": "lerna-semantic-release pre && lerna-semantic-release post",
     "commit": "git-cz",
     "lerna": "lerna",
-    "gitbook": "gitbook"
+    "gitbook": "gitbook",
+    "postinstall": "lerna bootstrap"
   },
   "devDependencies": {
     "commitizen": "2.9.5",
-    "cz-conventional-changelog": "1.2.0",
+    "cz-lerna-changelog": "1.2.1",
     "gh-pages": "0.12.0",
     "gitbook-cli": "2.3.0",
     "gitbook-plugin-addcssjs": "1.0.2",
@@ -40,12 +43,13 @@
     "gitbook-plugin-anchors": "0.7.1",
     "gitbook-plugin-editlink": "1.0.2",
     "gitbook-plugin-ga": "1.0.1",
-    "gitbook-plugin-github": "https://registry.npmjs.org/gitbook-plugin-github/-/gitbook-plugin-github-2.0.0.tgz",
+    "gitbook-plugin-github": "2.0.0",
     "gitbook-plugin-include-codeblock": "3.0.2",
-    "gitbook-plugin-rss": "^3.0.0",
+    "gitbook-plugin-rss": "3.0.0",
     "gitbook-plugin-styles-less": "1.0.0",
     "gitbook-plugin-youtube": "1.1.0",
     "lerna": "2.0.0-beta.38",
+    "lerna-semantic-release": "9.0.7",
     "rimraf": "2.5.4"
   },
   "repository": {
@@ -61,7 +65,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
+      "path": "./node_modules/cz-lerna-changelog"
     }
   }
 }
