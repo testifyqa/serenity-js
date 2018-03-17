@@ -3,8 +3,12 @@ language: node_js
 notifications:
   email: false
 node_js:
-- '6'
-before_install: scripts/travis/before_install.sh
+  - '6'
+addons:
+  chrome: stable
+before_install:
+  - scripts/travis/before_install.sh
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 before_script: scripts/travis/before_script.sh
 script: scripts/travis/script.sh
 after_script: scripts/travis/after_script.sh
