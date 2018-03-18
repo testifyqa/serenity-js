@@ -2,6 +2,7 @@
 require('ts-node/register');
 
 const
+    isCI         = require('../../isCI'),
     path         = require('path'),
     protractor   = require.resolve('protractor'),
     node_modules = protractor.substring(0, protractor.lastIndexOf('node_modules') + 12),
@@ -34,6 +35,7 @@ exports.config = {
 
         chromeOptions: {
             args: [ "--headless", "--disable-gpu", "--window-size=800,600" ]
+                .concat(isCI() ? ['--no-sandbox'] : [])
         }
     },
 };
